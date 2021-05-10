@@ -1,52 +1,63 @@
-const collector = require('djs-reaction-collector');
+const pagination = require('discord.js-pagination');
+const talkedRecently = new Set();
 
 module.exports = {
-    name: "help",
+    name: 'help',
     aliases: ['h'],
     description: 'Help page.',
-    execute (message, args, cmd, client, Discord) {
 
-  const { confirm } = require("djs-reaction-collector")
-  //EXAMPLE OF SENDING MESSAGE
-  const embed = new Discord.MessageEmbed()
-.setTitle('Help')
+
+    async execute (message, args, cmd, client, Discord) {
+
+   
+        if (talkedRecently.has(message.author.id)) {
+            message.channel.send('Wait 1 minute before using this command again! <@' + message.author.id + '>');
+    } else {
+        const HelpInfo = new Discord.MessageEmbed()
         .setColor('RANDOM')
-        .addFields(
-            {
-                name: ':one: Fun',
-                value: `cuddle, pat, poke...`,
-                inline: true
-            },
-            {
-                name: ':two: Moderation',
-                value: `ban, kick, mute...`,
-                inline: true
-            },
-            {
-                name: ':three: Miscellaneous',
-                value: `userinfo, bot-info...`,
-                inline: true
-        
-            },
-        )
-        .setFooter(`Created By: ${message.author.tag}`, message.author.displayAvatarURL())
-        
- message.channel.send(embed)
- .then(function (message) {
-    message.react("✅")
-    message.react("❌")
-  }).then(async (message) => {
-      const reactions = await confirm(message, message.author, ["✅", "❌"], 10000); //TIME IS IN MILLISECONDS
-      if(reactions === "✅") {
-          message.channel.send("Hello All")
-      }
-      if(reactions === "❌") {
-          return;
-      }
-      else {
-          console.log("Timed Out")
-      }
-  })}}
-	
+        .setTitle('Help Information')
+        .addField('**Prefix**', 'Bots prefix: `,,`')
+        .addField('**Pages**', '1.Bot Information', '2.Fun', '3.Moderation', '4.Miscellaneous')
 
-    
+        const fun = new Discord.MessageEmbed()
+        .setColor('RANDOM')
+        .setTitle('Fun')
+        .addField('`cuddle`', 'This will cuddle a user you mention')
+        
+        const Moderation = new Discord.MessageEmbed()
+        .setColor('RANDOM')
+        .setTitle('Moderation')
+        .addField('`ban`', 'mention someone to ban them off the server')
+
+        const Miscellaneous = new Discord.MessageEmbed()
+        .setColor('RANDOM')
+        .setTitle('Miscellaneous')
+        .addField('`userinfo`', 'will give a descripition about the user mentioned')
+
+
+        const pages = [
+            HelpInfo,
+            fun,
+            Moderation,
+            Miscellaneous,
+        ]
+
+        const emojiList = ["⏪", "⏩"]
+
+        const timeout = "17000";
+
+        pagination(message, pages, emojiList, timeout)
+        
+
+           // the user can type the command ... your command code goes here :)
+
+        // Adds the user to the set so that they can't talk for a minute
+        talkedRecently.add(message.author.id);
+        setTimeout(() => {
+          // Removes the user from the set after a minute
+          talkedRecently.delete(message.author.id);
+        }, 60000);
+    }
+    }
+
+}
