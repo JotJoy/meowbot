@@ -9,17 +9,22 @@ client.events = new Discord.Collection();
     require(`./handlers/${handler}`)(client, Discord);
 })
 
-//bots status
-client.once('ready', () => {
-    client.user.setStatus('available')
-    client.user.setPresence({
-        status: 'dnd',
-        activity: {
-            name: 'little nekos sleeping',
-            type: 'STREAMING',
-            url: 'https://www.twitch.tv/kaibu_nyan'
-        }
-    })
+//bot status 
+client.on('ready', async() => {
+
+    let serversIn = await client.guilds.cache.size;
+
+    setInterval(() => {
+        const statuses = [
+            `${serversIn} servers`,
+            `$h for help`,
+            `${client.guilds.cache.reduce((a, b) => a + b.memberCount, 0).toLocaleString()} users`
+        ]
+
+        const status = statuses[Math.floor(Math.random() * statuses.length)]
+        client.user.setActivity(status, { type: 'WATCHING'})
+    }, 30000)
+
 });
 
 client.login(process.env.TOKEN)
