@@ -26,7 +26,7 @@ module.exports = {
             },
             {
                 name: '👥 Server Users',
-                value: `Serving ${client.guilds.cache.reduce((a, b) => a + b.memberCount, 0).toLocaleString()}`,
+                value: `Serving ${client.guilds.cache.reduce((a, b) => a + b.memberCount, 0).toLocaleString()} users.`,
                 inline: true
             },
             {
