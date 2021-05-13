@@ -2,6 +2,7 @@ const ms = require('ms');
 
 module.exports = {
     name: 'slowmode',
+    permissions: [],
     description: 'Sets SlowMode for a Channel',
     async execute(message, args, cmd, client, Discord) {
 

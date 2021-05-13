@@ -1,6 +1,7 @@
 module.exports = {
     name: 'ping',
     aliases: ['pong'],
+    permissions: [],
     cooldown: 10,
     description: 'Gives the bot latency',
     execute(message, args, cmd, client, Discord){

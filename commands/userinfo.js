@@ -1,6 +1,7 @@
 module.exports = {
     name: 'userinfo',
     aliases: ['ui'],
+    permissions: [],
     cooldown: 10,
     description: 'Gives the user a number ',
     execute(message, args, cmd, client, Discord){

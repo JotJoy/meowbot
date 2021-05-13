@@ -4,6 +4,7 @@ const neko = new nekoclient();
 
 module.exports = {
     name: 'slap',
+    permissions: [],
     description: "Slap someone!",
     execute (message, args, cmd, client, Discord) {
         if (!message.guild) return;

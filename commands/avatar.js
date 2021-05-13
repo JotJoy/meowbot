@@ -1,6 +1,7 @@
 module.exports = {
     name: 'avatar',
     aliases: ['av', 'icon', 'pfp', 'ava'],
+    permissions: [],
     cooldown: 5,
     description: 'Will grab the users icon ',
     execute(message, args, cmd, client, Discord){

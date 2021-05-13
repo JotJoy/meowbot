@@ -4,6 +4,7 @@ const neko = new nekoclient();
 
 module.exports = {
     name: 'poke',
+    permissions: [],
     description: "Poke someone!",
     execute (message, args, cmd, client, Discord) {
         if (!message.guild) return;

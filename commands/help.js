@@ -4,6 +4,7 @@ const pagination = require('discord.js-pagination');
 module.exports = {
     name: 'help',
     aliases: ['h'],
+    permissions: [],
     cooldown: 10,
     description: 'Help page.',
 

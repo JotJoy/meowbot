@@ -3,6 +3,7 @@
 module.exports = {
     name: 'bot-info',
     aliases: ['botinfo'],
+    permissions: [],
     cooldown: 10,
     description: 'Will give information about the bot',
     async execute(message, args, cmd, client, Discord){

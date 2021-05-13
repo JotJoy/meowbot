@@ -4,6 +4,7 @@ const neko = new nekoclient();
 
 module.exports = {
     name: 'pat',
+    permissions: [],
     description: "Pat someone!",
     execute (message, args, cmd, client, Discord) {
         if (!message.guild) return;
