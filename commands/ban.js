@@ -1,9 +1,13 @@
 module.exports = {
     name: "ban",
     aliases: [],
-    permissions: ["BAN_MEMBERS"],
+    permissions: ["ADMINISTRATOR", "BAN_MEMBERS"],
     description: 'This is going to ban members',
     execute (message, args, cmd, client, Discord) {
+
+        if(!message.guild.me.hasPermission("BAN_MEMBERS")) {
+            return message.channel.send(`**${message.author.username}**, I do not have perms to ban someone`)
+        }
 
         if (!args[0]) {
             return message.channel.send(`Please mention a user!`).then(m => m.delete({ timeout: 5000 }));
