@@ -26,10 +26,9 @@ module.exports = {
                     {
                         name: 'Creation Date: ',
                         value: user.user.createdAt.toLocaleDateString("en-us"),
-                        inline: true
                     },
                     {
-                        name: 'Joined Date: ',
+                        name: 'Server Joined Date: ',
                         value: user.joinedAt.toLocaleDateString("en-us"),
                         
                     },
