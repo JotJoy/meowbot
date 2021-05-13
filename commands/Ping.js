@@ -8,7 +8,7 @@ module.exports = {
 
         const embedping = new Discord.MessageEmbed()
             .setDescription(`⌛ Latency is ${Math.round(client.ws.ping)} ms`)
-            .setColor('RANDOM');
+            .setColor('#ffc9f8');
         message.channel.send(embedping)
         
 

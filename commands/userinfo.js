@@ -11,7 +11,7 @@ module.exports = {
     
             const embed = new Discord.MessageEmbed()
                 .setTitle(`${user.user.username} stats`)
-                .setColor(`RANDOM`)
+                .setColor(`#ffc9f8`)
                 .setThumbnail(user.user.displayAvatarURL({dynamic : true, format: "png", size: 1024}))
                 .addFields(
                     {

@@ -3,13 +3,12 @@ const ms = require('ms');
 module.exports = {
     name: 'mute',
     aliases: ['unmute'],
+    permissions: ["BAN_MEMBERS", "MANAGE_MESSAGES", "KICK_MEMBERS"],
     cooldown: 0,
     description: 'This will mute and unmute degens',
     async execute(message, args, cmd, client, Discord){
         
         message.delete();
-
-        if(!message.member.hasPermission("MANAGE_MESSAGES") || !message.guild.owner) return message.channel.send(":x: **You do not have the permission to use this command!**");
 
         if(!message.guild.me.hasPermission(["MANAGE_MESSAGES", "ADMINISTRATOR"])) return message.channel.send(":x: **I do not have the permission to add roles!**")
 

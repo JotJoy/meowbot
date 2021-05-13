@@ -12,7 +12,7 @@ module.exports = {
         const embed = new Discord.MessageEmbed()
         .setThumbnail(client.user.displayAvatarURL({dynamic : true, format: "png", size: 1024}))
         .setTitle('Bot Status')
-        .setColor('RANDOM')
+        .setColor('#ffc9f8')
         .addFields(
             {
                 name: '🌐 Servers',

@@ -1,10 +1,11 @@
 module.exports = {
     name: "kick",
-    description: 'This will be bannning members',
-    execute (client, message, args) {
-        if (!message.member.hasPermission('KICK_MEMBERS')) {
-            return message.channel.send(`You are unable to kick members`).then(m => m.delete({ timeout: 5000 }));
-        }
+    description: 'This will be kicking members',
+    permissions: ["KICK_MEMBERS"],
+    execute (message, args, cmd, client, Discord) {
+        
+        message.delete();
+
         if (!args[0]) {
             return message.channel.send(`Please mention a user!`).then(m => m.delete({ timeout: 5000 }));
         }
