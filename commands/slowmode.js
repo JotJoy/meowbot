@@ -6,8 +6,6 @@ module.exports = {
     description: 'Sets SlowMode for a Channel',
     async execute(message, args, cmd, client, Discord) {
 
-        message.delete();
-
         if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.channel.send('You do not have **MANAGE_CHANNELS** permission!').then(m => m.delete({ timeout: 5000 }));
 
         if (!args[0]) return message.channel.send('You did not specify a time!').then(m => m.delete({ timeout: 5000}));

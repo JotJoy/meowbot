@@ -7,8 +7,6 @@ module.exports = {
     cooldown: 10,
     description: 'Will give information about the bot',
     async execute(message, args, cmd, client, Discord){
-        
-        message.delete();
 
         const embed = new Discord.MessageEmbed()
         .setThumbnail(client.user.displayAvatarURL({dynamic : true, format: "png", size: 1024}))

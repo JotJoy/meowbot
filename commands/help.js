@@ -10,8 +10,6 @@ module.exports = {
 
     async execute (message, args, cmd, client, Discord) {
 
-        message.delete();
-
         const HelpInfo = new Discord.MessageEmbed()
         .setColor('#ffc9f8')
         .setTitle('Help Information')

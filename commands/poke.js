@@ -7,6 +7,7 @@ module.exports = {
     permissions: [],
     description: "Poke someone!",
     execute (message, args, cmd, client, Discord) {
+        
         if (!message.guild) return;
             if (message.mentions.members.size === 0) {
             async function no_ping() {

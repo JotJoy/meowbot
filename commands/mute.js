@@ -7,8 +7,6 @@ module.exports = {
     cooldown: 0,
     description: 'This will mute and unmute degens',
     async execute(message, args, cmd, client, Discord){
-        
-        message.delete();
 
         if(!message.guild.me.hasPermission(["MANAGE_MESSAGES", "ADMINISTRATOR"])) return message.channel.send(":x: **I do not have the permission to add roles!**")
 

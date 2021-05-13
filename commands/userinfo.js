@@ -6,8 +6,6 @@ module.exports = {
     description: 'Gives the user a number ',
     execute(message, args, cmd, client, Discord){
         
-        message.delete();
-
         let user = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;
     
             const embed = new Discord.MessageEmbed()

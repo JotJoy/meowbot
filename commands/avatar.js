@@ -5,8 +5,6 @@ module.exports = {
     cooldown: 5,
     description: 'Will grab the users icon ',
     execute(message, args, cmd, client, Discord){
-        
-        message.delete();
 
         const embed = new Discord.MessageEmbed()
         if(!message.mentions.users.first()){

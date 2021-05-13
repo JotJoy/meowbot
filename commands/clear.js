@@ -5,8 +5,6 @@ module.exports = {
     description: 'Going to clear messages.',
     async execute(message, args, cmd, client, Discord) {
 
-        message.delete();
-
         if (!args[0]) {
             return message.channel.send(`Please enter a amount 1 to 100`)
         }

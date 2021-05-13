@@ -5,8 +5,6 @@ module.exports = {
     description: 'This is going to ban members',
     execute (message, args, cmd, client, Discord) {
 
-        message.delete();
-
         if (!args[0]) {
             return message.channel.send(`Please mention a user!`).then(m => m.delete({ timeout: 5000 }));
         }
