@@ -1,6 +1,6 @@
 module.exports = {
     name: "ban",
-    aliases: [''],
+    aliases: [],
     permissions: ["BAN_MEMBERS"],
     description: 'This is going to ban members',
     execute (message, args, cmd, client, Discord) {

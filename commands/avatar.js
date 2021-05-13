@@ -17,7 +17,7 @@ module.exports = {
             const user = message.mentions.users.first() || client.users.cache.get(u => u.id === args[0])
             embed.setTitle(`${user.tag}'s Avatar:`)
             embed.setDescription(`This is ${user.tag}'s avatar.`)
-            embed.setImage(client.user.displayAvatarURL({dynamic: true, format: "png", size: 4096}))
+            embed.setImage(user.displayAvatarURL({dynamic: true, format: "png", size: 4096}))
             embed.setColor('#ffc9f8')
             embed.setFooter("ID: " + user.id)
             .setTimestamp()
