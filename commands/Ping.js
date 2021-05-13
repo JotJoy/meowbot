@@ -1,7 +1,8 @@
 module.exports = {
     name: 'ping',
+    aliases: ['pong'],
     cooldown: 10,
-    description: 'Gives the user a number ',
+    description: 'Gives the bot latency',
     execute(message, args, cmd, client, Discord){
         
         message.delete();
