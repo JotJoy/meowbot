@@ -19,5 +19,6 @@ module.exports = {
 
         await message.channel.bulkDelete(deleteAmount, true);
 
+        
     }
 }
