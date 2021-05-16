@@ -9,7 +9,7 @@ module.exports = {
     aliases: ['wp'],
     description: "A random wallpaper!",
     execute (message, args, cmd, client, Discord) {
-      
+        if (message.channel.nsfw) {
         if (!message.guild) return;
         async function wallpaper() {
         const GIF = await neko.sfw.wallpaper();
@@ -19,6 +19,8 @@ module.exports = {
         .setImage(GIF.url)
         message.channel.send(embed);
         }
-        wallpaper();
+        wallpaper()
+} else {
+    message.channel.send("This channel is SFW.");
 }
-}
+}};

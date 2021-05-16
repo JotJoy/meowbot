@@ -1,7 +1,7 @@
 module.exports = {
     name: 'clear',
     aliases: ['purge', 'prune'],
-    permissions: ["MANAGE_MESSAGES", "KICK_MEMBERS"],
+    permissions: ["MANAGE_MESSAGES"],
     description: 'Going to clear messages.',
     async execute(message, args, cmd, client, Discord) {
 
@@ -11,7 +11,7 @@ module.exports = {
 
         let deleteAmount;
 
-        if (parseInt(args[0]) > 100 ) {
+        if (parseInt(args[0]) > 100) {
             deleteAmount = 100;
         } else {
             deleteAmount = parseInt(args[0]);

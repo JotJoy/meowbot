@@ -42,6 +42,7 @@ module.exports = {
         .addField('`$userinfo`', 'will give a descripition about the user mentioned')
         .addField('`$serverinfo`', 'will give a descripition about the server')
         .addField('`$wallpaper`', 'will give you a random wallpaper')
+        .addField('`$invite`', 'will igve you the invite for the bot')
        
 
 
