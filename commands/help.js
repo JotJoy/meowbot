@@ -14,7 +14,7 @@ module.exports = {
         .setColor('#ffc9f8')
         .setTitle('Help Information')
         .addField('**Prefix**', 'Bots prefix: `$`')
-        .addField('**Pages**', '`1.Bot Information`, `2.Fun`, `3.Moderation`, `4.Miscellaneous`')
+        .addField('**Pages**', '`1.Bot Information`, `2.Fun`, `3.Moderation`, `4.Miscellaneous`, `5.NSFW`')
 
         const fun = new Discord.MessageEmbed()
         .setColor('#ffc9f8')
@@ -43,7 +43,17 @@ module.exports = {
         .addField('`$serverinfo`', 'will give a descripition about the server')
         .addField('`$wallpaper`', 'will give you a random wallpaper')
         .addField('`$invite`', 'will igve you the invite for the bot')
-       
+
+        const NSFW = new Discord.MessageEmbed()
+        .setColor('#ffc9f8')
+        .setTitle('NSFW')
+        .addField('`$nsfwneko`', 'will give you a random nsfw neko Gif')
+        .addField('`$trap`', 'will give you a random trap')
+        .addField('`$feet`', 'will give you a nsfw feet picture')
+        .addField('`$anal`', 'will give you a anal Gif')
+        .addField('`$boobs`', 'will give you a boobs Gif')
+        .addField('`$cum`', 'will give you a random cum pciture')
+
 
 
         const pages = [
@@ -51,6 +61,7 @@ module.exports = {
             fun,
             Moderation,
             Miscellaneous,
+            NSFW,
         ]
 
         const emojiList = ["⏪", "⏩"]
