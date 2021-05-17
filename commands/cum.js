@@ -13,7 +13,7 @@ module.exports = {
         async function cumsluts() {
         const GIF = await neko.nsfw.cumsluts();
         const embed = new Discord.MessageEmbed()
-        .setColor('#202225')
+        .setColor('#ffc9f8')
         .setTitle(`${message.author.tag} here's a random cum picture. `)
         .setImage(GIF.url)
         message.channel.send(embed);

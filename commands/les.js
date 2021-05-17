@@ -14,7 +14,7 @@ module.exports = {
         async function wallpaper() {
         const GIF = await neko.nsfw.yuri();
         const embed = new Discord.MessageEmbed()
-        .setColor('#202225')
+        .setColor('#ffc9f8')
         .setTitle(`${message.author.tag} horny men`)
         .setImage(GIF.url)
         message.channel.send(embed);

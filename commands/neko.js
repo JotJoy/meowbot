@@ -13,7 +13,7 @@ module.exports = {
         async function nekoGif() {
         const GIF = await neko.nsfw.nekoGif();
         const embed = new Discord.MessageEmbed()
-        .setColor('#202225')
+        .setColor('#ffc9f8')
         .setTitle(`${message.author.tag} here's a random neko Gif. `)
         .setImage(GIF.url)
         message.channel.send(embed);

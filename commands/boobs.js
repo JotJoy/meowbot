@@ -13,7 +13,7 @@ module.exports = {
         async function boobs() {
         const GIF = await neko.nsfw.boobs();
         const embed = new Discord.MessageEmbed()
-        .setColor('#202225')
+        .setColor('#ffc9f8')
         .setTitle(`${message.author.tag} here are random boobs. `)
         .setImage(GIF.url)
         message.channel.send(embed);

@@ -13,7 +13,7 @@ module.exports = {
         async function anal() {
         const GIF = await neko.nsfw.anal();
         const embed = new Discord.MessageEmbed()
-        .setColor('#202225')
+        .setColor('##ffc9f8')
         .setTitle(`${message.author.tag} here's a random anal Gif. `)
         .setImage(GIF.url)
         message.channel.send(embed);

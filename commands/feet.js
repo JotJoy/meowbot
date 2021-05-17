@@ -13,7 +13,7 @@ module.exports = {
         async function feet() {
         const GIF = await neko.nsfw.feet();
         const embed = new Discord.MessageEmbed()
-        .setColor('#202225')
+        .setColor('#ffc9f8')
         .setTitle(`${message.author.tag} here are random feet. `)
         .setImage(GIF.url)
         message.channel.send(embed);

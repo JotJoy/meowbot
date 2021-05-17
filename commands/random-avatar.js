@@ -2,7 +2,7 @@ module.exports = {
     name: 'random-avatar',
     aliases: ['ra'],
     permissions: [],
-    cooldown: 5,
+    cooldown: 0,
     description: 'Will grab random users icons that have this bot added to the server ',
     execute(message, args, cmd, client, Discord){
 

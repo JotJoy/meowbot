@@ -13,7 +13,7 @@ module.exports = {
         async function trap() {
         const GIF = await neko.nsfw.trap();
         const embed = new Discord.MessageEmbed()
-        .setColor('#202225')
+        .setColor('#ffc9f8')
         .setTitle(`${message.author.tag} here's a trap. `)
         .setImage(GIF.url)
         message.channel.send(embed);

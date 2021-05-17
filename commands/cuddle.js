@@ -12,7 +12,7 @@ module.exports = {
             async function no_ping() {
                 const GIF = await neko.sfw.cuddle();
                 const exampleEmbed = new Discord.MessageEmbed()
-                .setColor('##ffc9f8')
+                .setColor('#ffc9f8')
                 .setTitle(`${message.author.tag} cuddled themselves`)
                 .setImage(GIF.url)
                 message.channel.send(exampleEmbed); 
@@ -24,7 +24,7 @@ module.exports = {
             const user = message.mentions.users.first();
             const GIF = await neko.sfw.cuddle();
             const exampleEmbed = new Discord.MessageEmbed()
-            .setColor('##ffc9f8')
+            .setColor('#ffc9f8')
             .setTitle(`${message.author.tag} cuddled ${user.tag}`)
             .setImage(GIF.url)
             message.channel.send(exampleEmbed); 
